@@ -17,15 +17,31 @@
                 echo "<p class='text-danger'>{$error}</p>";
             }
             ?>
-                <h1 class="h3 mb-3 fw-normal">Generar artículo</h1>
-                <form class="w-25 p-5 mb-5 bg-light rounded-3 m-auto d-grid gap-3" action="index.php" method="post">
+                <h1 class="h3 mb-3 fw-normal text-center">Generar artículo</h1>
+                <div class="w-25 p-5 mb-5 bg-light rounded-3 m-auto d-grid gap-3" method="post">
                     <div class="form-floating">
-                        <input name="titulo" type="text" class="form-control" id="floatingInput">
+                        <input name="titulo" type="text" class="form-control" id="titulo">
                         <label for="floatingInput">Título del artículo</label>
                     </div>
-                    <button class="btn btn-primary w-100 py-2" type="submit" name="generar">Generar</button>
-                </form>
+                    <div class="form-floating">
+                        <input name="key" type="text" class="form-control" id="key">
+                        <label for="floatingInput">API KEY</label>
+                    </div>
+
+                    <button class="btn btn-primary w-100 py-2" name="generar" id="generar">Generar</button>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                        <h2 id="tituloCabecera"></h2>
+                        <p id="articulo"></p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="" id="imagen">
+                    </div>
+                    <button id="guardar" class="btn btn-primary m-auto py-2">Guardar</button>
+                </div>
             </main>
+            <script src="./script.js"></script>
 
 <?php
         include('pie.php');

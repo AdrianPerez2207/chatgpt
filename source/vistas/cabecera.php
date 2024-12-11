@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reservas coworking</title>
+    <title>Blog CHATGPT</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8b30965d9a.js" crossorigin="anonymous"></script>
@@ -22,12 +22,12 @@
             <?php
                     if (isset($_SESSION['usuario'])) {
                         echo ("<form class='col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex gap-2' role='search' action='index.php' method='post'>
-                                    <input type='search' class='form-control' placeholder='Buscar sala...' aria-label='Search' name='buscarSalaNombre'>
+                                    <input type='search' class='form-control' placeholder='Buscar artículo...' aria-label='Search' name='buscarSalaNombre'>
                                     <button class='btn btn-primary' type='submit' name='buscarSala'>Buscar</button>
                                 </form>");
                     } else{
                         echo ("<form class='col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex gap-2' role='search'>
-                                    <input type='search' class='form-control' placeholder='Buscar sala...' aria-label='Search' disabled>
+                                    <input type='search' class='form-control' placeholder='Buscar artículo...' aria-label='Search' disabled>
                                     <button class='btn btn-primary' type='submit' disabled>Buscar</button>
                                 </form>");
                     }

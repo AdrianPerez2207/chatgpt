@@ -2,6 +2,7 @@
     namespace API_CHATGPT;
 
     use API_CHATGPT\controladores\ControladorAdmin;
+    use API_CHATGPT\controladores\ControladorArticulos;
     use API_CHATGPT\controladores\ControladorUsuarios;
 
     session_start();
@@ -40,6 +41,9 @@
         //Login
         if (isset($_POST["login"])) {
             ControladorUsuarios::login($_POST["email"], $_POST["password"]);
+        }
+        if (isset($_POST["titulo"], $_POST["contenido"], $_POST["imagen"])) {
+            ControladorArticulos::guardarArticulo($_POST["titulo"], $_POST["contenido"], $_POST["imagen"]);
         }
     } else {
         //Página de inicio

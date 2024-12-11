@@ -10,6 +10,18 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/source/vendor/composer" />
+      <path value="$PROJECT_DIR$/source/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/source/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/source/vendor/mongodb/mongodb" />
+      <path value="$PROJECT_DIR$/source/vendor/psr/log" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>

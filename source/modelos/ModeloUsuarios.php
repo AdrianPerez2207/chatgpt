@@ -8,7 +8,7 @@
             //Obtenemos la conexion
             $conexion = new ConexionBD();
             //Consulta MongoDB
-            $usuarioJson = $conexion->getConexion()->usuario->findOne(['email' => $email]);
+            $usuarioJson = $conexion->getConexion()->usuarios->findOne(['email' => $email]);
             $usuario = new Usuario($usuarioJson->_id, $usuarioJson->nombre, $usuarioJson->apellidos, $usuarioJson->email,
             $usuarioJson->password);
             //Cerrar la conexion

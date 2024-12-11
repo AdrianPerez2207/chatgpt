@@ -16,7 +16,7 @@
             $usuario = ModeloUsuarios::getEmail($email);
             if ($usuario->getEmail() == $email && $usuario->getPassword() == $password){
                 //Guardamos el email y el nomre del usuario en la sesión
-                $_SESSION["usuario"] = [$usuario->getEmail(), $usuario->getNombre()];
+                $_SESSION["usuario"] = ["email"=>$usuario->getEmail(), "nombre"=>$usuario->getNombre()];
                 //Redireccionamos al usuario
                 header("Location: index.php?accion=verPortal");
             } else{
