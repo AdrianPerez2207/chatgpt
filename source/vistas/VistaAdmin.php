@@ -30,18 +30,18 @@
 
                     <button class="btn btn-primary w-100 py-2" name="generar" id="generar">Generar</button>
                 </div>
-                <div class="d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center flex-column">
                     <div class="text-center">
                         <h2 id="tituloCabecera"></h2>
-                        <p id="articulo"></p>
+                        <p id="articulo" class="text-start mt-3"></p>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center mt-3">
                         <img src="" id="imagen">
                     </div>
-                    <button id="guardar" class="btn btn-primary m-auto py-2">Guardar</button>
+                    <button id="guardar" class="btn btn-primary m-auto py-2 mt-3">Guardar</button>
                 </div>
             </main>
-            <script src="./script.js"></script>
+            <script src="./vistas/script.js"></script>
 
 <?php
         include('pie.php');

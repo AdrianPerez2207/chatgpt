@@ -26,7 +26,7 @@
         }
         //Vista blog
         if ($_REQUEST["accion"] == "verBlog") {
-            ControladorBlog::mostrarBlog("");
+            ControladorArticulos::mostrarBlog();
         }
         //Vista Portal
         if ($_REQUEST["accion"] == "verPortal"){

@@ -15,4 +15,20 @@
             //Cerrar la conexion
             $conexion->cerrarSesion();
         }
+
+        public static function getArticulos(){
+            //Obtenemos la conexion
+            $conexion = new ConexionBD();
+            //Consulta MongoDB
+            $articulosJson = $conexion->getConexion()->articulos->find();
+
+            $articulos = array();
+            foreach ($articulosJson as $articulo){
+                $articulos[] = new Articulo($articulo['_id'], $articulo['titulo'], $articulo['contenido'],
+                    $articulo['imagen'], $articulo['nombre_usuario']);
+            }
+            //Cerrar la conexion
+            $conexion->cerrarSesion();
+            return $articulos;
+        }
     }

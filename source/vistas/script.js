@@ -1,10 +1,11 @@
 window.onload = async() => {
     const articuloGenerado = document.getElementById("generar");
     const guardarContenido = document.getElementById("guardar");
+
     articuloGenerado.addEventListener("click", async() =>{
-        console.log("dentro del evemto");
         const titulo = document.getElementById("titulo").value;
         const key = document.getElementById("key").value;
+        console.log(key);
 
         const urlImagen = document.getElementById("imagen");
         const contenidoArticulo = document.getElementById("articulo");
@@ -30,19 +31,19 @@ window.onload = async() => {
                 console.log(error);
                 throw error;
             }
-
         });
     });
 
 
 
     async function getArticulo(titulo, key){
+
         const url = "https://api.openai.com/v1/chat/completions"
         const options = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": key
+                "Authorization": `Bearer ${key}`
             },
             body:JSON.stringify({
                 "model": "gpt-4o-mini",
@@ -77,7 +78,7 @@ window.onload = async() => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": key
+                "Authorization": `Bearer ${key}`
             },
             //Pasamos el body cómo json con JSON.stringify
             body:JSON.stringify({
