@@ -7,22 +7,22 @@
 
         private $id;
         private $titulo;
-        private $descripcion;
+        private $contenido;
         private $imagen;
         private $nombre_usuario;
 
         /**
          * @param $id
          * @param $titulo
-         * @param $descripcion
+         * @param $contenido
          * @param $imagen
          * @param $nombre_usuario
          */
-        public function __construct($id, $titulo, $descripcion, $imagen, $nombre_usuario)
+        public function __construct($id, $titulo, $contenido, $imagen, $nombre_usuario)
         {
             $this->id = $id;
             $this->titulo = $titulo;
-            $this->descripcion = $descripcion;
+            $this->contenido = $contenido;
             $this->imagen = $imagen;
             $this->nombre_usuario = $nombre_usuario;
         }
@@ -62,17 +62,17 @@
         /**
          * @return mixed
          */
-        public function getDescripcion()
+        public function getContenido()
         {
-            return $this->descripcion;
+            return $this->contenido;
         }
 
         /**
-         * @param mixed $descripcion
+         * @param mixed $contenido
          */
-        public function setDescripcion($descripcion)
+        public function setContenido($contenido)
         {
-            $this->descripcion = $descripcion;
+            $this->contenido = $contenido;
         }
 
         /**
